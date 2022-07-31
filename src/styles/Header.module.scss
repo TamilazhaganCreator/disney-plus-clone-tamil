@@ -1,0 +1,29 @@
+.header{
+    @apply h-16 bg-black-russian flex items-center py-0 px-9;
+
+    .logo{
+        @apply w-20;
+    }
+    .navMenu{
+        @apply flex flex-1 ml-5 items-center ;
+        .menuItem{
+            @apply flex items-center px-3;
+            
+            img{
+                @apply h-5;
+            }
+            span{
+                @apply text-sm relative;
+                letter-spacing: 1.42px;
+                
+                &::after{
+                    content: '';
+                    @apply bg-white h-0.5 absolute right-0 left-0 -bottom-1.5;
+                }
+            }
+        }
+    }
+    .profileIcon{
+        @apply w-12 h-12 rounded-full cursor-pointer;
+    }
+}
