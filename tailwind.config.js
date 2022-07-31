@@ -6,7 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        'black-russian': '#090b13'
+        'black-russian': '#090b13',
+        'body-bg': '#040714'
+      },
+      backgroundImage: {
+        'home-bg': "url('/images/home-background.png')"
       }
     },
   },

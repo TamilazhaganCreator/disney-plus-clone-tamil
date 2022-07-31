@@ -34,8 +34,8 @@ function Header() {
         <div className={styles.header}>
             <img src='/images/logo.svg' className={styles.logo} alt="logo"></img>
             <div className={styles.navMenu}>
-                {menus.map(m => {
-                    return (<a className={styles.menuItem} href>
+                {menus.map((m,i) => {
+                    return (<a className={styles.menuItem} href key={i}>
                         <img src={m.path} alt='home'></img>
                         <span>{m.name}</span>
                     </a>)

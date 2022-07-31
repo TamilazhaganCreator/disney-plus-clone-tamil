@@ -3,15 +3,40 @@
 @tailwind utilities;
 
 body {
-  @apply text-white m-0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  @apply text-white m-0 bg-body-bg;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.home-bg::before {
+  content: "";
+  background-image: url("/public/images/home-background.png");
+  z-index: -1;
+  @apply absolute top-0 left-0 right-0 bg-cover w-screen h-screen;
+}
+
+.home-slider .slick-list{
+    @apply overflow-visible;
+}
+
+.home-slider .slick-dots li button:before{
+  font-size: 10px;
+  color: rgba(255,255,255,.7);
+}
+
+
+.home-slider *{
+        box-sizing: border-box;
+}
+
+.home-slider button{
+  @apply z-10;
 }

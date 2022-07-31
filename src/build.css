@@ -593,16 +593,48 @@ video {
 
 body {
   margin: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 7 20 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.home-bg::before {
+  content: "";
+  background-image: url("/public/images/home-background.png");
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.home-slider .slick-list {
+  overflow: visible;
+}
+
+.home-slider .slick-dots li button:before{
+  font-size: 10px;
+  color: rgba(255,255,255,.7);
+}
+
+.home-slider *{
+  box-sizing: border-box;
+}
+
+.home-slider button {
+  z-index: 10;
 }

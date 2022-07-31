@@ -1,0 +1,14 @@
+.imgSlider{
+    @apply mt-5;
+
+    
+    .sliderWrapper{
+        img{
+            @apply w-full h-full rounded shadow-lg border-4 border-transparent;
+
+            &:hover{
+                @apply border-4 border-white border-opacity-80;
+            }
+        }
+    }
+}
